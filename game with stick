@@ -1,0 +1,15 @@
+# Codeforces-Ladder-A
+//https://codeforces.com/problemset/problem/451/A
+
+#include <iostream>
+using namespace std;
+int main() {
+int p,q;
+cin>>p >>q;
+int ans=min(p,q);
+  if(ans%2==0)
+  cout<<"Malvika";
+  else
+  cout<<"Akshat";
+    return 0;
+}
