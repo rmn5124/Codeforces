@@ -1,0 +1,24 @@
+# Codeforces
+//https://codeforces.com/contest/1366/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define tst               long t;cin>>t;while(t--)          
+#define ll                long long
+
+int main(){
+    tst{
+    	ll n,m;
+    	cin>>n>>m;
+    	if(n==0 || m==0)
+    	cout<<"0"<<endl;
+    	else{
+    	    ll mn=min(n,m);
+    	    ll ans=min(mn,((n+m)/3));
+    		cout<<ans<<endl;
+    	}
+    	}
+    	 		
+           return 0;
+}
