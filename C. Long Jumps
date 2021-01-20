@@ -1,0 +1,65 @@
+# Codeforces
+
+//https://codeforces.com/contest/1472/problem/C
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define tst               long t;cin>>t;while(t--)
+#define fo(i,a,n)         for(int i=a;i<n;i++)
+#define M                 1000000007
+#define ci                cin>>
+#define co                cout<<
+#define nw                cout<<"\n"
+#define fl                float
+#define double            db
+#define unsigned          long long ull
+#define itr               for(auto it= v.begin();it !=v.end();it++)
+#define PI                3.1415926535897932384626
+#define pl                pair<ll,ll>
+#define mp                make_pair
+//#define sort              sort(a,a+n) 
+#define sortv             sort(v.begin(),v.end()
+#define ll                long long
+#define pb                push_back
+#define vi                vector<int>
+#define vl                vector<long long>
+#define vll               vector<pair<long long,long long>>
+#define vii               vector<pair<int,int>>
+#define vvi               vector<vector<int>>
+#define maxq(x)           priority_queue<x>
+#define minq(x)           priority_queue<x,vector<x>,greater<x>>
+#define graph             map<int,vi>
+#define vvl               vector<vector<long long>>
+#define pb                push_back
+#define ppb               pop_back
+#define pf                push_front
+#define ppf               pop_front
+#define all(x)            (x).begin(),(x).end()
+#define uniq(v)           (v).erase(unique(all(v)),(v).end())
+#define sz(x)             (int)((x).size())
+#define f                 first
+#define s                 second
+#define pii               pair<int,int>
+
+
+ int main(){
+
+  tst {
+    	ll n;
+    	cin>>n;
+    	ll a[n];
+    	ll var[n];
+    	ll res[n];
+    	for(ll i=0;i<n;i++){
+    	cin>>a[i];
+    	var[i]=a[i];}
+    	for(ll i=0;i<n;i++){
+    		
+    		if((i+a[i])<n){
+    		    var[i+a[i]] =max(var[i+a[i]],var[i]+a[i+a[i]]);}
+    	}
+    	sort(var,var+n);
+    	cout<<var[n-1]<<endl;
+    }
+     }
