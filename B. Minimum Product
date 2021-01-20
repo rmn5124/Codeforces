@@ -1,0 +1,29 @@
+# Codeforces
+
+//https://codeforces.com/contest/1409/problem/B
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll  long long
+
+ll res(ll a,ll b,ll x,ll y,ll n){
+    ll t=min(n,a-x);
+    a=a-t;
+    n=n-t;
+    t=min(n,b-y);
+    b=b-t;
+    return (a*b);
+}
+
+int main() {
+  int t;
+  cin>>t;
+ while(t--){
+      ll a,b,x,y,n;
+      cin>>a>>b>>x>>y>>n;
+   ll min1= res(a,b,x,y,n);
+   ll min2=res(b,a,y,x,n);
+   cout<<min(min1,min2)<<"\n";
+  }
+  return 0;
+}
