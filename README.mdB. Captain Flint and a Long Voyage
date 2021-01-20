@@ -1,0 +1,25 @@
+# Codeforces
+
+//https://codeforces.com/contest/1388/problem/B
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+   
+    int q;
+    cin >> q;
+
+    while (q--) {
+        int n; cin >> n;
+        int x = ceil((double)n  / 4);
+        for (int i = 0; i < n - x; ++i) {
+            cout << 9;
+        }
+        for (int i = 0; i < x; ++i) {
+            cout << 8;
+        }
+        cout << endl;
+    }
+}
