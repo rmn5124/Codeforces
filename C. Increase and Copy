@@ -1,0 +1,23 @@
+# Codeforces
+//https://codeforces.com/contest/1426/problem/C
+
+#include <bits/stdc++.h>
+typedef long long int ll;
+const unsigned int MOD = 1000000007;
+
+using namespace std;
+
+int main()
+{
+    ll t;cin>>t;
+    while(t--){
+	ll n;cin>>n;
+	
+   ll ans=sqrt(n);
+   if(ans*ans==n) cout<<(2*ans)-2<<endl;
+   else if((ans+1)*ans>=n) cout<<(2*ans)-1<<endl;
+   else cout<<2*ans<<endl;
+
+    }
+	return 0;
+}
