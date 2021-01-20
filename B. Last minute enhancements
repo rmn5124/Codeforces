@@ -1,0 +1,26 @@
+# Codeforces
+
+//https://codeforces.com/contest/1466/problem/B
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define tst               long t;cin>>t;while(t--)          
+#define ll                long long
+
+int main(){
+    tst{
+    	ll n;
+    	cin>>n;
+    	ll a[n];
+    	map<ll,ll>m;
+    	for(int i=0;i<n;i++){
+    		cin>>a[i];
+    		if(m[a[i]]==0) m[a[i]]++;
+    		else m[a[i]+1]++;}
+    		cout<<m.size()<<endl;
+    	}
+    	 			
+    	 		
+           return 0;
+}
