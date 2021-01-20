@@ -1,0 +1,24 @@
+# Codeforces
+
+//https://codeforces.com/contest/1473/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define tst               long t;cin>>t;while(t--)          
+#define ll                long long
+
+int main(){
+    tst{
+    	ll n,d;cin>>n>>d;
+    	ll a[n];int flag=0;
+    	for(ll i=0;i<n;i++) cin>>a[i];
+    	sort(a,a+n);
+    	if(a[n-1]<=d)
+    	cout<<"yes"<<endl;
+    	else{
+    	if(a[0]+a[1]<=d) cout<<"yes"<<endl;
+    	else cout<<"no"<<endl;}
+    }
+    return 0;
+}
