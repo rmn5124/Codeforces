@@ -1,0 +1,27 @@
+# Codeforces
+
+//https://codeforces.com/contest/1395/problem/A
+
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+bool check(int r,int b,int g,int w){
+    if(r%2+g%2+b%2+w%2>1)
+    return false;
+    return true;
+}
+int main() {
+  int t;
+  cin>>t;
+  while(t--){
+ int r,b,g,w;
+ cin>>r>>b>>g>>w;
+ if (check(r,g,b,w))
+            cout<<"Yes"<<"\n";
+        else if( r>0 and g>0 and b>0 and check(r-1,g-1,b-1,w+1))
+            cout<<"Yes"<<"\n";
+        else 
+    cout<<"No"<<"\n";
+  }
+  return 0;
+}
