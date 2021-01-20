@@ -1,0 +1,30 @@
+# Codeforces
+//https://codeforces.com/contest/1359/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main() {
+	// your code goes here
+	ll t;
+	cin>>t;
+	while(t--){
+	    ll n,m,k;
+	    cin>>n>>m>>k;
+	    int count=0;
+	    if(n/k>=m)
+	    cout<<m<<endl;
+	    else if(m==0)
+	    cout<<"0"<<endl;
+	   else{
+        ll card=n/k;
+        ll count=0;
+        ll left=m-card;
+        k--;
+        count=ceil((double)left/k);
+        cout<<card-count<<endl;
+      }
+    } 
+	    
+	return 0;
+}
