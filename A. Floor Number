@@ -1,0 +1,28 @@
+# Codeforces
+//https://codeforces.com/contest/1426/problem/A
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--){
+    int n,x;
+    cin>>n>>x;
+    int res;
+    if(n==1||n==2)
+        res=1;
+    else{
+        int p=(n-2)/x;
+        int rem=(n-2)%x;
+        if(rem==0)
+            res=p+1;
+        else
+            res=p+2;
+    }
+    cout<<res<<endl;
+  }
+    return 0;
+}
