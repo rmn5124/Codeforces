@@ -1,0 +1,31 @@
+# Codeforces
+// Problem: A. Nezzar and Colorful Balls
+// Contest: Codeforces - Codeforces Round #698 (Div. 2)
+// URL: https://codeforces.com/contest/1478/problem/A
+// Memory Limit: 512 MB
+// Time Limit: 1000 ms
+// Powered by CP Editor (https://github.com/cpeditor/cpeditor)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define tst               long t;cin>>t;while(t--)
+//#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ll                    long long
+# define quick            ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+
+int main(){
+	quick
+    tst{
+ll n;cin>>n;
+ll a[n],mx=0;map<ll,ll>m;
+for(ll i=0;i<n;i++){ cin>>a[i];m[a[i]]++;}
+for(auto i:m){
+	if(i.second>mx)
+	mx=i.second;
+}
+cout<<mx<<endl;
+ 
+}
+return 0;
+}
