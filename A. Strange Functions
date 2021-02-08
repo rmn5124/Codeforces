@@ -1,0 +1,18 @@
+# Codeforces
+
+https://codeforces.com/contest/1455/problem/A
+
+#include <iostream>
+using namespace std;
+int main() {
+  int n;
+  cin>>n;
+  string q;
+  int p=0;
+  for(int i=0;i<n;i++){
+    cin>>q;
+    p=q.size();
+    cout<<p<<'\n';
+}
+return 0;
+}
