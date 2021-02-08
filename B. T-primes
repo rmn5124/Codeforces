@@ -1,0 +1,47 @@
+# Codeforces
+//https://codeforces.com/contest/230/problem/B
+
+#include<bits/stdc++.h>
+using namespace std;
+const int maximum = 1000001;
+bool prime[maximum];
+void sieve ()
+{
+    int i,j;
+    prime[0]=prime[1]=true;
+    
+  for(  i=4;i<maximum;i+=2)
+  prime[i]= true;
+  
+  for(i=3;i*i<=maximum;i+=2)
+    if (!prime[i])
+  
+      for(j=i*i;j<maximum;j+=2*i)
+      prime[j]=true;
+      
+}
+
+int main (void){
+    
+
+    sieve ();
+
+    int t;
+    long long d, n,r;
+
+    cin>>t;
+
+    while (t--)
+    {
+        cin>>n;
+
+        r = sqrt(n);
+
+        if (!prime[r] && r*r == n)
+            printf ("YES\n");
+        else
+            printf ("NO\n");
+    }
+
+    return 0;
+}
