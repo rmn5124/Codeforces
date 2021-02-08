@@ -1,0 +1,29 @@
+# Codeforces
+//https://codeforces.com/contest/1463/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long t;
+    cin>>t;
+    while(t--){
+    long long a,b,c;
+    cin>>a>>b>>c;
+    long long sum,p;
+    sum=a+b+c;
+    p=sum/9;
+    if(sum%9 !=0)
+    cout<<"NO"<<"\n";
+
+    else {
+    if(a>=p && b>=p && c>=p)
+    cout<<"YES"<<"\n";
+    else
+    cout<<"NO"<<"\n";
+        
+    }
+    }
+    
+  return 0;  
+}
