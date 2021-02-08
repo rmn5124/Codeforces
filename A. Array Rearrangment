@@ -1,0 +1,59 @@
+# Codeforces
+//https://codeforces.com/contest/1445/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+
+
+	while(t--){
+	     int n;
+	    cin>>n;
+	    int x;
+	cin>>x;
+
+
+	    int a[n];
+	    int b[n];
+	    int count=0;
+
+
+	    for(int i=0;i<n;i++)
+	    cin>>a[i];
+	    sort(a,a+n,greater<int>());
+	     for(int i=0;i<n;i++)
+	    cin>>b[i];
+	    if(n==1){
+	        if((a[0]+b[0])<=x)
+	        cout<<"Yes"<<endl;
+	        else
+	        cout<<"No"<<endl;
+
+	    }
+	    else{
+	    for(int i=0;i<n;i++){
+	    if((a[i]+b[i])<=x){
+	         count++;
+
+	    }
+	    }
+	     if(count==n)
+	cout<<"Yes"<<endl;
+	else
+	cout<<"No"<<endl;
+
+	    }
+
+
+
+	}
+	return 0;
+}
+
+
+
+
+ 
