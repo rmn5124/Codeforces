@@ -1,0 +1,66 @@
+# Codeforces
+//https://codeforces.com/contest/1459/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,n) for( i=0;i<n;i++)
+#define ci cin>>
+#define co cout<<
+#define nw cout<<"\n"
+#define fl float
+#define tst while(t--)
+#define double db
+#define unsigned long long ull
+#define itr for(auto it= v.begin();it !=v.end();it++)
+#define PI 3.1415926535897932384626
+#define vi vector<int>
+#define vl vector<ll>
+#define pl pair<ll,ll>
+#define mp make_pair
+#define pb push_back
+#define sort sort(a,a+n) ;
+#define sortv sort(v.begin(),v.end()
+
+
+int main(){
+	int t,i;
+	cin>>t;
+	tst {
+	    int n;
+	    ci n;
+	    int a[n];
+	    int b[n];
+	    
+	    string s1,s2;
+	    ci s1;
+	    ci s2;
+	    fo(i,n)
+	        a[i]=s1[i]-'0';
+	    
+	    
+	     fo(i,n)
+	        b[i]=s2[i]-'0';
+	    
+	    
+	    
+	    int c1=0;
+	    int c2=0;
+	    
+	    fo(i,n) {
+	        if(a[i]>b[i]){
+	            c1++;
+	        }
+	        else if(b[i]>a[i])
+	        c2++;
+	    }
+	    
+	    if(c1==c2)
+	    co "EQUAL"<<endl;
+	    else if(c1>c2)
+	    co "RED"<<endl;
+	    else
+	    co "BLUE"<<endl;
+	}
+	return 0;
+}
