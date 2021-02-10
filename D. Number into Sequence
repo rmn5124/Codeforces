@@ -1,0 +1,48 @@
+# Codeforces
+//https://codeforces.com/contest/1454/problem/D
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long long int n;
+        cin >> n;
+        vector<long long int> v;
+        long long int m = 0, mi = 0;
+        for (long long int i = 2; i * i <= n; i++)
+        {
+            long long int c = 0;
+            long long int z = n;
+            while (z % i == 0)
+            {
+                z = z / i;
+                c++;
+            }
+            if (c > m)
+            {
+                m = c;
+                mi = i;
+            }
+        }
+        if (mi == 0)
+        {
+            cout << 1 << endl;
+            cout << n << endl;
+        }
+       
+        else
+        {
+            cout << m << endl;
+            while (n % (mi * mi) == 0)
+            {
+                cout << mi << " ";
+                n = n / mi;
+            }
+            cout << n << endl;
+        }
+    }
+}
