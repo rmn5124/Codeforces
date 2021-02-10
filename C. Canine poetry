@@ -1,0 +1,39 @@
+# Codeforces
+//https://codeforces.com/contest/1466/problem/C
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+ 
+ string s, t;
+ll ans = 0;
+ ll n;
+
+ 
+ 
+void solve() {
+	cin >> s;
+	n = s.length();
+	
+	ll ans = 0;
+	for (ll i = 1; i < n; i++) {
+		if (s[i] == s[i - 1] || (i >= 2 && s[i] == s[i - 2])) {
+			s[i] = '.';
+			++ans;
+		}
+	}
+	
+	cout << ans << '\n';
+}
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+ 
+   tst{
+     solve();
+   } 
+return 0;   
+}
