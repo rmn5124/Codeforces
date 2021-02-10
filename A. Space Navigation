@@ -1,0 +1,57 @@
+# Codeforces
+//https://codeforces.com/contest/1481/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+ 
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+ 
+   tst{
+        ll xCord,yCord;
+       cin>>xCord>>yCord;
+       string str;
+       cin>>str;
+       ll r=0,u=0,d=0,l=0;
+       for(ll i=0;i<str.length();i++){
+           if(str[i]=='R')r++;
+           if(str[i]=='U')u++;
+           if(str[i]=='D')d++;
+           if(str[i]=='L')l++;
+       }
+       if(xCord>=0 && yCord>=0){
+           if(r>=xCord && u>=yCord){
+               cout<<"YES"<<endl;
+           } else {
+               cout<<"NO"<<endl;
+           }
+       }
+       else if(xCord<0 && yCord<0){
+           if(l>=abs(xCord) && d>=abs(yCord)){
+               cout<<"YES"<<endl;
+           } else {
+               cout<<"NO"<<endl;
+           }
+       }
+       else if (xCord>=0 && yCord<0){
+           if(r>=xCord && d>=abs(yCord)){
+               cout<<"YES"<<endl;
+           } else {
+               cout<<"NO"<<endl;
+           }
+       }
+       else {
+           if(l>=abs(xCord) && u>=yCord){
+               cout<<"YES"<<endl;
+           } else {
+               cout<<"NO"<<endl;
+           }
+       }     
+   } 
+return 0;   
+}
