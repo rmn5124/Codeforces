@@ -1,0 +1,38 @@
+# Codeforces
+//https://codeforces.com/contest/1470/problem/A
+#include <bits/stdc++.h> 
+using namespace std;
+#define fio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+#define ll long long 
+#define endl "\n"
+ 
+void solve(){
+  int n,m; cin>>n>>m;
+  ll amt=0;
+  ll k[n]; for(int i=1;i<=n;i++) { cin>>k[i]; }
+  ll c[m]; for(int i=1;i<=m;i++) { cin>>c[i]; }
+  ll g[n];
+  for(int i=1;i<=n;i++){
+  	g[i]=c[k[i]];
+  }
+  sort(g+1,g+n+1);
+  int j=1;
+  for(int i=n;i>=1;i--){
+  	if(c[j]<g[i]){
+  		amt+=c[j];
+  		j++;
+  	}
+  	else{
+  		amt+=g[i];
+  	}
+  }
+  cout<<amt<<endl;
+}
+ 
+int main(){
+    fio;
+    int t;  cin>>t;  
+    while(t--){ 
+        solve();
+    }
+}
