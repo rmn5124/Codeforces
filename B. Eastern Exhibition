@@ -1,0 +1,28 @@
+# Codeforces
+//https://codeforces.com/problemset/problem/1486/B
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+ 
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+   
+ tst{
+ll n;cin>>n;ll x[n],y[n];
+rep(i,0,n) cin>>x[i]>>y[i];
+if(n&1) cout<<"1\n";
+else {
+    sort(x,x+n);sort(y,y+n);
+    ll medX=x[n/2]-x[n/2-1]+1;
+    ll medY=y[n/2]-y[n/2-1]+1;
+    cout<<medX*medY<<"\n";
+}
+
+ }
+    return 0;
+}
