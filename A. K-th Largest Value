@@ -1,0 +1,35 @@
+# Codeforces
+//https://codeforces.com/problemset/problem/1491/A
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+
+
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+   
+ ll n,q,x,y,c0=0,c1=0;cin>>n>>q;ll a[n],b[n];rep(i,0,n) {cin>>a[i];if(a[i]==1) c1++;else c0++;}
+
+ 
+ for(ll i=0;i<q;i++){
+     cin>>x>>y;
+ if(x==1){
+     a[y-1]=1-a[y-1];
+     if(a[y-1]==1) {c1++;c0--;}
+     
+     else {c0++;c1--;}
+ }
+     
+ else if(x==2){
+   if(y<=c1) cout<<"1\n";
+   else  cout<<"0\n";
+    
+ }
+ }
+    return 0;
+}
