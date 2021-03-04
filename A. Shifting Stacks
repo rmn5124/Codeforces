@@ -1,0 +1,26 @@
+# Codeforces
+//https://codeforces.com/problemset/problem/1486/A
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+ 
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+   
+ tst{
+ll n;cin>>n;ll a[n],sum=0,f=0;rep(i,0,n){ cin>>a[i];}
+
+rep(i,0,n){ sum+=a[i];
+//if(sum<i)
+if(sum<i){ f=1;break;}
+sum-=i;
+}
+ if (f==1)cout<<"NO\n";else cout<<"YES\n";
+ }
+    return 0;
+}
