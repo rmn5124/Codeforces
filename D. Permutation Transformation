@@ -1,0 +1,38 @@
+# Codeforces
+//https://codeforces.com/problemset/problem/1490/D
+
+#include<bits/stdc++.h>
+using namespace std;
+#define tst               long t;cin>>t;while(t--)
+#define rep(i,a,n)         for(int i=a;i<n;i++)
+#define ull               unsigned long long int
+#define ll                long long int
+ 
+ void sol(int l,int r,int a[],int b[],int maxD=0){
+if(r<l) return;
+if(l==r){
+    b[l]=maxD;return;
+}
+int m=l;
+rep(i,l+1,r+1){
+    if(a[m]<a[i])
+    m=i;
+}
+b[m]=maxD; //maximim element with dpth 0
+sol(l,m-1,a,b,maxD+1);
+sol(m+1,r,a,b,maxD+1);
+ }
+int main(){
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);cout.tie(NULL);
+   
+ tst{
+ll n;cin>>n;
+int a[n];rep(i,0,n) cin>>a[i];
+int b[n];
+sol(0,n-1,a,b,0);
+rep(i,0,n) cout<<b[i]<<" ";
+cout<<"\n";
+ }
+    return 0;
+}
