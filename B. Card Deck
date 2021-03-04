@@ -1,0 +1,39 @@
+# Codeforces
+//https://codeforces.com/problemset/problem/1492/B
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+int main(){
+       ios_base::sync_with_stdio(false);
+       cin.tie(NULL);cout.tie(NULL);
+       ll t;
+       cin>>t;
+       while(t--){
+        ll n;
+        cin >> n;
+ 
+        ll a[n];
+        ll pos[n+1] = {0};
+        for (ll i=0;i<n;i++){
+            cin>>a[i];
+            pos[a[i]]=i;
+        }
+ 
+        ll start = 0;
+        ll end = n;
+ 
+        for (ll i=n;i>0;i--){
+            start = pos[i];
+            if(end>start){
+                for (ll j=start;j<end; j++){
+                    cout<<a[j]<< " ";
+                }
+                end = start;
+            }
+        }
+        cout << "\n";
+    }
+    return 0;
+}
